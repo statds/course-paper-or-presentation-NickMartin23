@@ -11,8 +11,8 @@
 
 
 
-\title{Proposal: Something Interesting}
-\author{Carol Li\\
+\title{Life and Art}
+\author{Nicholas Martin\\
   University of Connecticut
 }
 
@@ -21,37 +21,24 @@
 
 
 \paragraph{Introduction}
-Background about your research; touch the three questions to be addressed in an
-introduction; cite relevant refernces~\citep[e.g.,][]{}.
 
-\lipsum[1]
+People and Pop culture have a strongly intertwined relationship. We can see examples of this in every moment of our daily lives. In the clothes we wear, the music we listen to. This begs the age old question. Does art imitate life? or does life imitate art? I am not here to answer this question, yet it has always intrigued me. If we as humans can predict trends in music or in pop culture maybe we would be able to predict trends in moods and attitudes in art as well. Because trends do exist suggesting the latter. Happy by Pharell Williams goes number 1 on the billboard  hot 100 in 2014; four years latter SAD! by XXXtentacion goes number 1. Now is this a coincidence or does this actually suggest a general trend in the human condition from happy to sad from 2014-2018. It is important to think about these questions as the age of AI-generated music looms overhead, thrusting the future of emotion and artistry in music into a great shadow. It is also important because we as a species can become more intact with our own understanding of culture and the effect it has on us as humans. Previous research has already been conducted concerning what aspects of music make a song more happy or more sad. It is my intention to use this data in order to cross examine the relationship between music and the general attitude of the population as a whole.
 
 \paragraph{Specific Aims}
-Formulate your research question;
-translate your research question into statistical/data science questions
-
-\lipsum[2]
+Research Question: Can I use the emotional quality of music to predict the emotional trend of the US population? In terms of Data Science questions I am wondering if I can fit models to that of the emotional quality of music. I am also wondering if I can fit a regression model representing the emotional trend of the US population. I am looking for any comparisons between the two and I am also aiming to predict future events in both the case of the emotional trend of music, as well as the emotional trend of the human race.
 
 \paragraph{Data}
-Hopefully, you have identified the data needed for your project. Give a
-description about it.
-
-\lipsum[3]
+The Data I will be using for this statistical analysis is from the DEAM dataset, which is the MedialEval Dataset for Emotional Analysis in Music. It is a dataset that consists of 1802 excerpts and full songs annotated with valence and arousal values both continuously (per-second) and over the whole song.  There is also metadata describing the audio excerpts (their duration, genre, etc.) that is in the metadata archive that we can use for further individual quality of song analysis. Information for each track in this excerpt includes song year, valence mean, valence std, arousal mean, arousal std etc; Arousal being the identifying quantity determining the mood of a track. I will also be using the data provided by "Our World in Data" to conduct my cross examination. This is a data set provided by Our World in Data that describes people degree of life satisfaction since 2011. It is called "Happiness and Life Satisfaction". It provides a net rating for life satisfaction surveyed to participants on a scale from 1-10. It is also based on geographical location, so we will be predominately focused on the United States of America.
 
 \paragraph{Research Design and Methods}
-What design or methods will you use?
-Cite relevant references~\citep[e.g.,][]{}.
+Within this Project my research design is as follows: I will start by examining each of the two data sets individually I will examine for trends in happiness or sadness of a song using an F-test in the case of the first dataset. In order to cross examine the two data sets I will use linear regression and attempt to fit a model to both sets of data. I will separate both data sets into a training sample and testing sample. This way I attempt to predict the forecast of both the satisfaction of life across US citizens and the emotional quality of music as it changes from year to year.
 
-\lipsum[4]
 
 \paragraph{Discussion}
-What are the most challenge parts of the task?
-What are the limitations of your work? What is your fall-back plan if
-something unexpected happens?
+The most challenging parts of this analysis remain to be the minimal amount of data surrounding the conversation between emotional quality in music to the general mood of the population. Little amount of research on the topic prior to this point does seem to be the largest hurdle in terms of creating a successful statistical analysis. The limitations of this work include the genres that were picked for the quality of music database. That database selects from a lot of predominately western genres of music whereas a more thorough conversation might lend itself to more global data. However the data concerning the Satisfaction of Life statistic does provide global data but is restrained by the fact that its data range is smaller. There is definitely enough analysis to do on both of these data sets as it stands; My fall back plan is to examine more internal aspects relative to each dataset individually. I believe that this would be a good alternative in the worst case that I run into some troubles attempting to cross examine
 
-\lipsum[5]
 
-\bibliography{../manuscript/refs}
+\bibliography{/refs}
 \bibliographystyle{chicago}
 
 \end{document}
