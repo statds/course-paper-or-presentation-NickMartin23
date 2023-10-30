@@ -30,14 +30,7 @@ Humans and Pop Culture are deeply intertwined. Films and music of a certain time
 \section{Introduction}
 \label{sec:intro}
 
-From an industry perspective, increasing the means to predict trends in music is very important should you want the public to be receptive of your work. It is as a musician myself that I find this very fascinating. If one were able to predict exactly what kind of music the public would receive most positivley they'd have had it made. Intruiging from the financial respective of record lables and distributors as well. As well what could be more important to any buisness nowadays than being at the forefront of the wave of Artificial Intelligence. Very little research has been done on preciscly this topic, yet much research has been done on the trend of human happiness and the emotional aspect of music respectivley. 
-
-Use this section to answer three questions:
-What has been done on this topic in the literature?
-What is your contribution?
-
-
-
+From an industry perspective, increasing the means to predict trends in music is very important should you want the public to be receptive of your work. It is as a musician myself that I find this very fascinating. If one were able to predict exactly what kind of music the public would receive most positivley they'd have had it made. Intruiging from the financial respective of record lables and distributors as well. As well what could be more important to any buisness nowadays than being at the forefront of the wave of Artificial Intelligence. Very little research has been done on preciscly this topic, yet much research has been done on the trend of human happiness and the emotional aspect of music respectivley. I aim specifically to use the trends which appeared in music from 2011-2022 as a means to experiment with the possibility of predicting a population mood trend using said data. I aim to identify a correlation between the Happiness/Sadness of a Population and those same traits in popular music. For this project I will use data from the World Happiness Report \cite{ushappiness}.
 
 
 
