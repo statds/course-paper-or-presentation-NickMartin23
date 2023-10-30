@@ -57,23 +57,23 @@ would you say you personally feel you stand at this time?” \cite{ushappiness} 
 
 
 \begin{table}[tbp]
-  \caption{This is my first table.}
+  \caption{Billboard Charts Data from 2011-2022}
   \label{tab:rv}
 \centering
 \begin{tabular}{rrr}
   \toprule
-normal & poisson & gamma \\ 
+Song & Description & Year \\ 
   \midrule
--0.110 & 4 & 2.401 \\ 
-  0.116 & 4 & 3.529 \\ 
-  -0.828 & 9 & 2.112 \\ 
-  -0.066 & 6 & 11.104 \\ 
-  0.219 & 3 & 4.815 \\ 
-  0.303 & 5 & 2.188 \\ 
-  0.544 & 0 & 8.050 \\ 
-  -2.617 & 8 & 3.646 \\ 
-  0.747 & 1 & 5.178 \\ 
-  -1.103 & 4 & 3.043 \\ 
+Rolling in the Deep & Happy, Chilled, Uplifting & 2011 \\ 
+  Give Me Everything & Uplifting, Energetic, Aggresive & 2011 \\ 
+  Grenade & Happy, Chilled, Uplifting & 2011 \\ 
+  F**k You & Uplifting, Happy, Energetic & 2011 \\ 
+  Pumped Up Kicks & Energetic, Happy, Uplifting & 2011 \\ 
+  Just the Way You Are & Sad, Dark, Chilled & 2011 \\ 
+  Raise Your Glass & Energetic, Uplifting, Happy & 2011 \\ 
+  F**kin' Perfect & Chilled, Sad, Happy & 2011 \\ 
+  Look At Me Now & 1 Dark, Sad, Chilled 2011 \\ 
+  Someone Like You & Happy, Chilled, Calm & 2011 \\ 
    \bottomrule
 \end{tabular}
 \end{table}
