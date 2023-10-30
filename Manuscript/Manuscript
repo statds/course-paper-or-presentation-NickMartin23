@@ -44,16 +44,14 @@ A discussion concludes in Section~\ref{sec:disc}.
 \label{sec:data}
 
 The data from the World Happiness Report is collected world wide through the Gallup World Poll. For my purposes I will just be using Data from the United States. Thw World Happiness report has data from 2011 then 2014-2022 Providing an index for each year based on Americans responses to the poll. The following question was prompted “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder
-would you say you personally feel you stand at this time?” \cite{ushappiness} The average score per year is shown in the figure below:
-
-Figure~\ref{fig:cars} shows the distance against the speed from this dataset.
+would you say you personally feel you stand at this time?” \cite{ushappiness} Figure~\ref{fig:happiness} above shows the average response per year.
 
 
 \begin{figure}[tbp]
   \centering
-  \includegraphics[width=\textwidth]{cars.pdf}
-  \caption{This is my first figure.}
-  \label{fig:cars}
+  \includegraphics[width=\textwidth]{happiness-cantril-ladder.png}
+  \caption{World Happiness Report for the USA 2011-2022}
+  \label{fig:happiness}
 \end{figure}
 
 
@@ -85,15 +83,6 @@ normal & poisson & gamma \\
 \label{sec:meth}
 
 
-\begin{equation}
-  \label{eq:pythagorean}
-  \a^2 + b^2 = c^2.
-\end{equation}
-
-Equation~\eqref{eq:pythagorean} is interesting. 
-
-
-
 
 
 \section{Results}
@@ -113,6 +102,6 @@ What are worth pursuing further in the future?
 
 
 \bibliography{refs}
-\bibliographystyle{mcap}
+\bibliographystyle{plain}
 
 \end{document}
