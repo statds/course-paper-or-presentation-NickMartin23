@@ -15,9 +15,8 @@
 
 %% meta data
 
-\title{Stats Paper}
-\author{Jun Yan\\
-  Department of Statistics\\
+\title{The Relationship Between Mood and Music}
+\author{Nicholas Martin\\
   University of Connecticut
 }
 
@@ -25,7 +24,7 @@
 \maketitle
 
 \begin{abstract}
-Here is the abstract.  
+Humans and Pop Culture are deeply intertwined. Films and music of a certain time period can always reflect the general mood or attitude of a decade. This begs the age old question. Does art imitate life? or does life imitate art? Although I am not here to answer this question definitivley, it has always intrigued me. If we as humans can predict trends in music or in pop culture maybe we would be able to predict trends in moods and attitudes in art as well. Because trends do exist suggesting the latter. Happy by Pharell Williams goes number 1 on the billboard  hot 100 in 2014; four years latter SAD! by XXXtentacion goes number 1. Now is this a coincidence or does this actually suggest a general trend in the human condition from happy to sad from 2014-2018. It is important to think about these questions as the age of AI-generated music looms overhead, thrusting the future of emotion and artistry in music into a great shadow. It is also important because we as a species can become more intact with our own understanding of culture and the effect it has on us. Previous research has already been conducted concerning what aspects of music make a song more happy or more sad. It is my intention to use this data in order to cross examine the relationship between music and the general attitude of the population as a whole.
 \end{abstract}
 
 
@@ -37,15 +36,9 @@ Why is the topic important/interesting?
 What has been done on this topic in the literature?
 What is your contribution?
 
-\lipsum[1-3]
 
-To cite a reference, here are examples.
-\citet{xie2015dynamic} did something ... \lipsum[1]
 
-A lot of work has been done \citep[e.g.,][]{xie2015dynamic}.
-\lipsum[2]
-Some parametric bootstrap sample size approach was proposed by
-\citet{dwivedi2017analysis}. 
+
 
 
 % roadmap
@@ -59,15 +52,6 @@ A discussion concludes in Section~\ref{sec:disc}.
 \section{Data}
 \label{sec:data}
 
-Use this section to describe the data that helps to answer your research
-questions. Recall Einstein's equation
-\begin{equation}
-  \label{eq:mc2}
-  E = m c^2,
-\end{equation}
-which states that the energy $E$ of a particle in its rest frame as the product
-of mass ($m$) with the speed of light squared ($c^2$).
-\lipsum{1}
 
 \section{Methods}
 \label{sec:meth}
@@ -136,8 +120,6 @@ What are the limitations of this study?
 
 What are worth pursuing further in the future?
 
-\lipsum[1-2]
-Watch for prevalence of diabetes \citep{wild2004global}.
 
 \bibliography{refs}
 \bibliographystyle{mcap}
