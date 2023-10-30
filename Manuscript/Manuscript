@@ -54,7 +54,7 @@ would you say you personally feel you stand at this time?” \cite{ushappiness} 
   \label{fig:happiness}
 \end{figure}
 
-I am going to compare the trend of US Happiness and Life Satisfaction to that of the trend in Music across the 2010's. Cyanite.ai is a project that uses spotify AI to break songs down into there core moods. I will collect songs from the year end top 100 list from the years 2011 and 2014-2022 and feed them into Cyanite.ai in order to calculate the core moods from each song. Usings Cyanite.ai I have received this information from 2011. For the Full Project I will include the remaining Years.
+I am going to compare the trend of US Happiness and Life Satisfaction to that of the trend in Music across the 2010's. \cite{sadamericans} Cyanite.ai is a project that uses spotify AI to break songs down into there core moods. I will collect songs from the year end top 100 list from the years 2011 and 2014-2022 and feed them into Cyanite.ai in order to calculate the core moods from each song. Usings Cyanite.ai I have received this information from 2011. For the Full Project I will include the remaining Years.
 
 \begin{table}[tbp]
   \caption{Billboard Charts Data from 2011-2022}
