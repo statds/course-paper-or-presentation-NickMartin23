@@ -58,7 +58,7 @@ would you say you personally feel you stand at this time?” \cite{ushappiness} 
 
 \begin{table}[tbp]
   \caption{Billboard Charts Data from 2011-2022}
-  \label{tab:rv}
+  \label{tab:t100}
 \centering
 \begin{tabular}{rrr}
   \toprule
@@ -72,7 +72,7 @@ Rolling in the Deep & Happy, Chilled, Uplifting & 2011 \\
   Just the Way You Are & Sad, Dark, Chilled & 2011 \\ 
   Raise Your Glass & Energetic, Uplifting, Happy & 2011 \\ 
   F**kin' Perfect & Chilled, Sad, Happy & 2011 \\ 
-  Look At Me Now & 1 Dark, Sad, Chilled 2011 \\ 
+  Look At Me Now & Dark, Sad, Chilled & 2011 \\ 
   Someone Like You & Happy, Chilled, Calm & 2011 \\ 
    \bottomrule
 \end{tabular}
