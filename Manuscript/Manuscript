@@ -43,9 +43,18 @@ A discussion concludes in Section~\ref{sec:disc}.
 \section{Data}
 \label{sec:data}
 
-The data from the World Happiness Report is collected world wide through the Gallup World Poll. For my purposes I will just be using Data from the United States. Thw World Happiness report has data from 2011 then 2014-2022 Providing an index for each year based on Americans responses to the poll. 
+The data from the World Happiness Report is collected world wide through the Gallup World Poll. For my purposes I will just be using Data from the United States. Thw World Happiness report has data from 2011 then 2014-2022 Providing an index for each year based on Americans responses to the poll. The following question was prompted “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder
+would you say you personally feel you stand at this time?” \cite{ushappiness} The average score per year is shown in the figure below:
+
+Figure~\ref{fig:cars} shows the distance against the speed from this dataset.
 
 
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=\textwidth]{cars.pdf}
+  \caption{This is my first figure.}
+  \label{fig:cars}
+\end{figure}
 
 
 
@@ -92,15 +101,6 @@ Equation~\eqref{eq:pythagorean} is interesting.
 
 
 
-Figure~\ref{fig:cars} shows the distance against the speed from this dataset.
-
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=\textwidth]{cars.pdf}
-  \caption{This is my first figure.}
-  \label{fig:cars}
-\end{figure}
 
 \section{Discussion}
 \label{sec:disc}
