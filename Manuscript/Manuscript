@@ -23,7 +23,7 @@
 \maketitle
 
 \begin{abstract}
-Humans and Pop Culture are deeply intertwined. Films and music of a certain time period can always reflect the general mood or attitude of a decade. This begs the age old question. Does art imitate life? or does life imitate art? Although I am not here to answer this question definitivley, it has always intrigued me. If we as humans can predict trends in music or in pop culture maybe we would be able to predict trends in moods and attitudes in art as well. Because trends do exist suggesting the latter. Happy by Pharell Williams goes number 1 on the billboard  hot 100 in 2014; four years latter SAD! by XXXtentacion goes number 1. Now is this a coincidence or does this actually suggest a general trend in the human condition from happy to sad from 2014-2018. It is important to think about these questions as the age of AI-generated music looms overhead, thrusting the future of emotion and artistry in music into a great shadow. It is also important because we as a species can become more intact with our own understanding of culture and the effect it has on us. Previous research has already been conducted concerning what aspects of music make a song more happy or more sad. It is my intention to use this data in order to cross examine the relationship between music and the general attitude of the population as a whole.
+Humans and Pop Culture are deeply intertwined. Films and music of a certain time period can always reflect the general mood or attitude of a decade. This begs the age old question. Does art imitate life? or does life imitate art? Although I am not here to answer this question definitivley, it has always intrigued me. If we as humans can predict trends in music or in pop culture maybe we would be able to predict trends in moods and attitudes in art as well. Because trends do exist suggesting the latter. Happy by Pharell Williams goes number 1 on the billboard  hot 100 in 2014; four years latter SAD! by XXXtentacion goes number 1. Now is this a coincidence or does this actually suggest a general trend in the human condition from happy to sad from 2014-2018. It is important to think about these questions as the age of AI-generated music looms overhead, thrusting the future of emotion and artistry in music into a great shadow. It is also important because we as a species can become more intact with our own understanding of culture and the effect it has on us. Previous research has already been conducted concerning what aspects of music make a song more happy or more sad. It is my intention to use this data in order to cross examine the relationship between music and the general attitude of the population as a whole. \cite{emotionstudies}
 \end{abstract}
 
 
@@ -31,8 +31,6 @@ Humans and Pop Culture are deeply intertwined. Films and music of a certain time
 \label{sec:intro}
 
 From an industry perspective, increasing the means to predict trends in music is very important should you want the public to be receptive of your work. It is as a musician myself that I find this very fascinating. If one were able to predict exactly what kind of music the public would receive most positivley they'd have had it made. Intruiging from the financial respective of record lables and distributors as well. As well what could be more important to any buisness nowadays than being at the forefront of the wave of Artificial Intelligence. Very little research has been done on preciscly this topic, yet much research has been done on the trend of human happiness and the emotional aspect of music respectivley. I aim specifically to use the trends which appeared in music from 2011-2022 as a means to experiment with the possibility of predicting a population mood trend using said data. I aim to identify a correlation between the Happiness/Sadness of a Population and those same traits in popular music. For this project I will use data from the World Happiness Report \cite{ushappiness}.
-
-
 
 % roadmap
 The rest of the paper is organized as follows.
@@ -45,32 +43,11 @@ A discussion concludes in Section~\ref{sec:disc}.
 \section{Data}
 \label{sec:data}
 
-
-\section{Methods}
-\label{sec:meth}
-
-Use this section to present the methodologies that will generate results by
-analyzing the data. Suppose that the radius of a circle is $r$. Then its area is
-\begin{equation}
-  \label{eq:area}
-  \pi r^2.
-\end{equation}
-
-Equation~\eqref{eq:area} is interesting. \lipsum[1-4]
-
-Sometimes I don't want an equation to be numbered such as this one:
-\[
-  f(x) = \frac{1}{\sqrt{2\pi}} \exp\left( - \frac{x^2}{2} \right),
-\]
-which is the density of a standard normal variable.
+The data from the World Happiness Report is collected world wide through the Gallup World Poll. For my purposes I will just be using Data from the United States. Thw World Happiness report has data from 2011 then 2014-2022 Providing an index for each year based on Americans responses to the poll. 
 
 
 
-\section{Results}
-\label{sec:resu}
 
-Table~\ref{tab:rv} summarizes some example draws from some distributions.
-\lipsum[1-4]
 
 \begin{table}[tbp]
   \caption{This is my first table.}
@@ -93,6 +70,27 @@ normal & poisson & gamma \\
    \bottomrule
 \end{tabular}
 \end{table}
+
+
+\section{Methods}
+\label{sec:meth}
+
+
+\begin{equation}
+  \label{eq:pythagorean}
+  \a^2 + b^2 = c^2.
+\end{equation}
+
+Equation~\eqref{eq:pythagorean} is interesting. 
+
+
+
+
+
+\section{Results}
+\label{sec:resu}
+
+
 
 Figure~\ref{fig:cars} shows the distance against the speed from this dataset.
 
