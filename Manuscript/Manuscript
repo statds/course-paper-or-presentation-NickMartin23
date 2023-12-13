@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{natbib}
+\usepackage{setspace}
 
 % for space filling
 % highlighting hyper links
@@ -19,17 +20,19 @@
   University of Connecticut
 }
 
+\doublespacing
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-In 2023 the music industry remains more divided than ever before, yet as a society we grow more and more connected each year through outlets like the internet or social media. What is the explanation for this? Most believe that with the progression of technology comes the ability to streamline information and media. An individual's ability to consume music looks much different nowadays than it did in the 1960’s. Streaming platforms have basically made it so that any child with a cellphone has access to millions of songs for free. A stark contrast from the earlier 20th centuries’ vinyl format. It is because of this evolution in media consumption that most people believe the charts are so segmented. With the internet people dont have to subject themselves to Pop radio in order to hear music. Specific tastes and subgenres can be discovered easily using Spotify for example; a streaming service that even recommends specific songs based on what you’ve already listened to. People's taste in music has become so specific this way. Now anyone is able to find songs and artists that exactly match their music taste regardless of the popularity of that artist. It is in this explanation that I hold a lot of stock in explaining why Billboard's 2023 Year End Top 100 songs chart contains such a variation of artists, and why the content of the songs on it varry aswell. There is so much information that we can surmise by examining these year end lists. And although it may seem arbitrary, a lot of this information is being used in full effect by the music industry, not only to predict the popularity of the music, but as well to learn more about ourselves as a species and the way we’ve consumed media over time.
+In 2023 the music industry remains more divided than ever before, yet as a society we grow more and more connected each year through outlets like the internet or social media. What is the explanation for this? Most believe that with the progression of technology comes the ability to streamline information and media. An individual's ability to consume music looks much different nowadays than it did in the 1960’s. Streaming platforms have basically made it so that any child with a cellphone has access to millions of songs for free. A stark contrast from the earlier 20th centuries’ vinyl format. It is because of this evolution in media consumption that most people believe the charts are so segmented. With the internet people don't have to subject themselves to Pop radio in order to hear music. Specific tastes and sub genres can be discovered easily using Spotify for example; a streaming service that even recommends specific songs based on what you’ve already listened to. People's taste in music has become so specific this way. Now anyone is able to find songs and artists that exactly match their music taste regardless of the popularity of that artist. It is in this explanation that I hold a lot of stock in explaining why Billboard's 2023 Year End Top 100 songs chart contains such a variation of artists, and why the content of the songs on it vary as well. There is so much information that we can surmise by examining these year end lists. And although it may seem arbitrary, a lot of this information is being used in full effect by the music industry, not only to predict the popularity of the music, but as well to learn more about ourselves as a species and the way we’ve consumed media over time.
 \end{abstract}
 
 
 \section{Introduction}
 \label{sec:intro}
-For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statiscal models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in findinging out more about ourselves and our habites over time. It is of course very important for people who are a part of the music industry aswell. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentiall chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.
+For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statistical models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in finding out more about ourselves and our habits over time. It is of course very important for people who are a part of the music industry as well. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentially chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.\\
 
 % roadmap
 The rest of the paper is organized as follows.
@@ -42,40 +45,16 @@ A discussion concludes in Section~\ref{sec:disc}.
 \section{Data}
 \label{sec:data}
 
-The data from the World Happiness Report is collected world wide through the Gallup World Poll. For my purposes I will just be using Data from the United States. Thw World Happiness report has data from 2011 then 2014-2022 Providing an index for each year based on Americans responses to the poll. The following question was prompted “Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder
-would you say you personally feel you stand at this time?” \cite{ushappiness} Figure~\ref{fig:happiness} above shows the average response per year.
+For the actual track list that I will be using to make my predictions I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity aswell; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on a particular song. 
 
 
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=\textwidth]{happiness-cantril-ladder.png}
-  \caption{World Happiness Report for the USA 2011-2022}
-  \label{fig:happiness}
-\end{figure}
+
+
+
+
 
 I am going to compare the trend of US Happiness and Life Satisfaction to that of the trend in Music across the 2010's. \cite{sadamericans} Cyanite.ai is a project that uses spotify AI to break songs down into there core moods. I will collect songs from the year end top 100 list from the years 2011 and 2014-2022 and feed them into Cyanite.ai in order to calculate the core moods from each song. Usings Cyanite.ai I have received this information from 2011. For the Full Project I will include the remaining Years.
 
-\begin{table}[tbp]
-  \caption{Billboard Charts Data from 2011-2022}
-  \label{tab:t100}
-\centering
-\begin{tabular}{rrr}
-  \toprule
-Song & Description & Year \\ 
-  \midrule
-Rolling in the Deep & Happy, Chilled, Uplifting & 2011 \\ 
-  Give Me Everything & Uplifting, Energetic, Aggresive & 2011 \\ 
-  Grenade & Happy, Chilled, Uplifting & 2011 \\ 
-  F**k You & Uplifting, Happy, Energetic & 2011 \\ 
-  Pumped Up Kicks & Energetic, Happy, Uplifting & 2011 \\ 
-  Just the Way You Are & Sad, Dark, Chilled & 2011 \\ 
-  Raise Your Glass & Energetic, Uplifting, Happy & 2011 \\ 
-  F**kin' Perfect & Chilled, Sad, Happy & 2011 \\ 
-  Look At Me Now & Dark, Sad, Chilled & 2011 \\ 
-  Someone Like You & Happy, Chilled, Calm & 2011 \\ 
-   \bottomrule
-\end{tabular}
-\end{table}
 
 
 \section{Methods}
