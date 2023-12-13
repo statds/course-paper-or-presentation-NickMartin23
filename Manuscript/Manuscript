@@ -14,7 +14,7 @@
 
 %% meta data
 
-\title{The Relationship Between Mood and Music}
+\title{2023 An Analysis of this Year in Music}
 \author{Nicholas Martin\\
   University of Connecticut
 }
@@ -29,8 +29,7 @@ In 2023 the music industry remains more divided than ever before, yet as a socie
 
 \section{Introduction}
 \label{sec:intro}
-
-From an industry perspective, increasing the means to predict trends in music is very important should you want the public to be receptive of your work. It is as a musician myself that I find this very fascinating. If one were able to predict exactly what kind of music the public would receive most positivley they'd have had it made. Intruiging from the financial respective of record lables and distributors as well. As well what could be more important to any buisness nowadays than being at the forefront of the wave of Artificial Intelligence. Very little research has been done on preciscly this topic, yet much research has been done on the trend of human happiness and the emotional aspect of music respectivley. I aim specifically to use the trends which appeared in music from 2011-2022 as a means to experiment with the possibility of predicting a population mood trend using said data. I aim to identify a correlation between the Happiness/Sadness of a Population and those same traits in popular music. For this project I will use data from the World Happiness Report \cite{ushappiness}.
+For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statiscal models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in findinging out more about ourselves and our habites over time. It is of course very important for people who are a part of the music industry aswell. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentiall chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.
 
 % roadmap
 The rest of the paper is organized as follows.
