@@ -23,5 +23,11 @@ cor(Music$Track.Length, Music$X2023.Year.End.Position)
 cor(Music$BPM, Music$X2023.Year.End.Position)
 cor(Music$Energy, Music$X2023.Year.End.Position)
 cor(Music$Valence, Music$X2023.Year.End.Position)
+columnsremoved <- c(1,2)
+numericaldf <- Music[, -columnsremoved]
+cor_matrix <- cor(numericaldf)
+print(cor_matrix)
 
+
+% 
 
