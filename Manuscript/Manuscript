@@ -88,7 +88,14 @@ For the actual track list that I will be using to make my predictions I am using
 
 In order to conduct the model building segment of our statistical analysis latter we must encode the categorical variable within this dataset so that when we use Rstudio we can perform linear regression. Similarly I have converted the track length variable which is in format (M:SS) into a numerical value representing how long each song is in seconds. Further summarizing the data will tell us more even more information. We can see that it was a particularly good year for Morgan Wallen who had 8 songs on the Billboard charts this year doubling second places SZA. We can predict that the artist variable may have significant pull when it comes to our final model; as it definitely payed to be Morgan Wallen in 2023.\\
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Histogram1.pdf}
+  \caption{Histograms of Independent Variables}
+  \label{fig:Hist1}
+\end{figure}[h]
 
+I have plotted histograms for the four numeric variables in our dataset and the results are as shown. We can see the individual distributions for Track Length, BPM, Energy, and Valence. As we can see from the plots, none of these distributions look particularly bad. We can see that they all roughly display normality, and there are no bars that extend abnormally far away from the rest of the distribution. Similarly we can see that no bars in any of the Histograms hang abnormally tall; this suggests no existence of any outliers within our dataset. This is important information because it means that we can now check 
 
 \section{Methods}
 \label{sec:meth}
