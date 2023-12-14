@@ -47,15 +47,27 @@ A discussion concludes in Section~\ref{sec:disc}.
 
 For the actual track list that I will be using to make my predictions I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity aswell; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on a particular song. 
 
-
-
-
-
-
-
-I am going to compare the trend of US Happiness and Life Satisfaction to that of the trend in Music across the 2010's. \cite{sadamericans} Cyanite.ai is a project that uses spotify AI to break songs down into there core moods. I will collect songs from the year end top 100 list from the years 2011 and 2014-2022 and feed them into Cyanite.ai in order to calculate the core moods from each song. Usings Cyanite.ai I have received this information from 2011. For the Full Project I will include the remaining Years.
-
-
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    Chart Position & Artist 2 & Track Length & BPM & Energy & Valence \\
+    \hline
+    1 & Morgan Wallen & 2:43 & 203.853 & 67.5 & 51.8 \\
+    2 & Miley Cyrus & 3:20 & 118.048 & 69.1 & 63.2 \\
+    3 & SZA & 2:33 & 88.993 & 72.8 & 43 \\
+    4 & Taylor Swift & 3:20 & 97.008 & 64.3 & 53.3 \\
+    5 & Metro Boomin & 3:41 & 97.95 & 60.8 & 15.2 \\
+    6 & Rema & 3:59 & 106.999 & 80.6 & 80.2 \\
+    7 & The Weeknd & 4:20 & 133.349 & 52.5 & 51 \\
+    8 & Luke Combs & 4:25 & 97.994 & 60.3 & 67 \\
+    9 & SZA & 3:21 & 143.008 & 55.1 & 39.2 \\
+    10 & David Guetta & 2:55 & 128.04 & 96.5 & 30.4 \\
+    \hline
+  \end{tabular}
+  \caption{Head of 2023 top 100 Data}
+  \label{T100Head}
+\end{table}
 
 \section{Methods}
 \label{sec:meth}
