@@ -29,5 +29,14 @@ cor_matrix <- cor(numericaldf)
 print(cor_matrix)
 
 
-% 
-
+% Regression Analysis
+library("MASS")
+Music$X2023.Year.End.Position = factor(Music$X2023.Year.End.Position)
+Y = Music$X2023.Year.End.Position
+X1 = Music$Artist
+X2 = Music$Track.Length
+X3 = Music$BPM
+X4 = Music$Energy
+X5 = Music$Valence
+ordinal_model1 <- polr(Y ~ X1 + X2 + X3 + X4 + X5, data = Music, Hess = TRUE)
+summary(ordinal_model1)
