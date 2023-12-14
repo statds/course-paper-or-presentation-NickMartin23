@@ -15,3 +15,13 @@ hist(Music$Track.Length, main = "Variable 1", col = "lightblue")
 hist(Music$BPM, main = "Variable 2", col = "lightgreen")
 hist(Music$Energy, main = "Variable 3", col = "lightcoral")
 hist(Music$Valence, main = "Variable 4", col = "lightgoldenrodyellow")
+plot(Music$Track.Length, Music$X2023.Year.End.Position, main="Scatterplot of Track Length", xlab="Track Length", ylab="Chart Position", pch=16, col="blue")
+plot(Music$BPM, Music$X2023.Year.End.Position, main="Scatterplot of BPM", xlab="BPM", ylab="Chart Position", pch=16, col="blue")
+plot(Music$Energy, Music$X2023.Year.End.Position, main="Scatterplot of Energy", xlab="Energy", ylab="Chart Position", pch=16, col="blue")
+plot(Music$Valence, Music$X2023.Year.End.Position, main="Scatterplot of Valence", xlab="Valence", ylab="Chart Position", pch=16, col="blue")
+cor(Music$Track.Length, Music$X2023.Year.End.Psoition)
+cor(Music$BPM, Music$X2023.Year.End.Psoition)
+cor(Music$Energy, Music$X2023.Year.End.Psoition)
+cor(Music$Valence, Music$X2023.Year.End.Psoition)
+
+
