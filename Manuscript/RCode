@@ -1,5 +1,12 @@
+
 % Reading csv data into R and factoring Artist Categorical Variable
 
 Music <- read.csv("C:/Users/marti/Downloads/2023T100.csv")
 head(Music)
 Music$Artist <- factor(Music$Artist)
+
+
+% Exploratory Data Analysis
+
+summary(Music)
+Music$Track.Length <- as.numeric(substring(Music$Track.Length, 1, 1)) * 60 + as.numeric(substring(Music$Track.Length, 3, 4))
