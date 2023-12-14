@@ -93,9 +93,33 @@ In order to conduct the model building segment of our statistical analysis latte
   \includegraphics[width=0.8\textwidth]{Histogram1.pdf}
   \caption{Histograms of Independent Variables}
   \label{fig:Hist1}
-\end{figure}[h]
+\end{figure}
 
 I have plotted histograms for the four numeric variables in our dataset and the results are as shown. We can see the individual distributions for Track Length, BPM, Energy, and Valence. As we can see from the plots, none of these distributions look particularly bad. We can see that they all roughly display normality, and there are no bars that extend abnormally far away from the rest of the distribution. Similarly we can see that no bars in any of the Histograms hang abnormally tall; this suggests no existence of any outliers within our dataset. This is important information because it means that we can now check 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Scatterplot1.pdf}
+  \caption{Scatterplots of Independant Variables}
+  \label{fig:Scatterplot1}
+\end{figure}
+
+As We can see from each of the scatter-plots our variables do not appear to have any initial correlation with that of the dependant variable chart position. We've determined this as there is notable randomness in each of the plots and there is no apparent positive or negative trend that we can see visually. There are however small exceptions that can be found in the plot of Track Length, and Energy; Note the subtle pattern that may be examined among the points. A small positive correlation can potentially be seen in both casenerios. In order to further confirm these findings I have gone ahead and used the correlation function in Rstudio so as to determine these variables relationship with the dependent.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    Track Length & BPM & Energy & Valence \\
+    \hline
+    0.06836279 & 0.02202227 & -0.04396084 & 0.1356192 \\
+    \hline
+  \end{tabular}
+  \caption{Correlation Coeficient of Numeric Variables}
+  \label{CorrCoef}
+\end{table}
+
+
 
 \section{Methods}
 \label{sec:meth}
