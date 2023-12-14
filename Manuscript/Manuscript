@@ -35,11 +35,7 @@ In 2023 the music industry remains more divided than ever before, yet as a socie
 For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statistical models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in finding out more about ourselves and our habits over time. It is of course very important for people who are a part of the music industry as well. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentially chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.\\
 
 % roadmap
-The rest of the paper is organized as follows.
-The data will be presented in Section~\ref{sec:data}.
-The methods are described in Section~\ref{sec:meth}.
-The results are reported in Section~\ref{sec:resu}.
-A discussion concludes in Section~\ref{sec:disc}.
+The rest of the paper is organized traditionally with Section~\ref{sec:data} where I will analyze the data and clean it according to our modeling purposes. I will also discuss which data I will be using for this project and where it comes from as well as some summary statistics. Next I will use Section~\ref{sec:meth} in order to perform some testing and to formulate my plan for modeling using ordinal regression. Finally within Section~\ref{sec:resu} I will analyze the model that I have landed on by testing the goodness of fit, as well I will be able to interpret the coefficients. This is followed by the conclusion of this paper; a brief discussion found in Section~\ref{sec:disc}.
 
 \begin{table}
   \centering
