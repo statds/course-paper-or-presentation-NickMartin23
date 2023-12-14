@@ -10,3 +10,8 @@ Music$Artist <- factor(Music$Artist)
 
 summary(Music)
 Music$Track.Length <- as.numeric(substring(Music$Track.Length, 1, 1)) * 60 + as.numeric(substring(Music$Track.Length, 3, 4))
+par(mfrow = c(2,2))
+hist(Music$Track.Length, main = "Variable 1", col = "lightblue")
+hist(Music$BPM, main = "Variable 2", col = "lightgreen")
+hist(Music$Energy, main = "Variable 3", col = "lightcoral")
+hist(Music$Valence, main = "Variable 4", col = "lightgoldenrodyellow")
