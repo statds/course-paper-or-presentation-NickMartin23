@@ -119,11 +119,48 @@ As We can see from each of the scatter-plots our variables do not appear to have
   \label{CorrCoef}
 \end{table}
 
+The correlation coefficients that we've gotten for each of the variables support the thoughts from our scatter-plots. the coefficients remain generally close to zero which could determine no correlation in some case. This could also suggest using transformations, such as a log transformation, in order to more accurately present the relationship that a particular variable has with the chart position dependant variable. The correlation between Valence and chart position remains the highest at 0.1356192. This could suggest potentially that songs that have a higher valence (Sound Happier; i.e Major Keys) would be more likely to chart. I have also gone ahead and conducted tests for multicolinearity as to check the predictors for any particularly strong correlation. This step is important, otherwise we may run into some problems down the road with respects to estimating the coefficients and interpreting our results.\\
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & Track Length & BPM & Energy & Valence \\
+    \hline
+    Track Length & 1.00000000 & -0.01009661 & -0.07279693 & -0.1971547 \\
+    BPM & -0.01009661 & 1.00000000 & 0.05436178 & 0.1333351 \\
+    Energy & -0.07279693 & 0.05436178 & 1.00000000 & 0.3307796 \\
+    Valence & -0.19715467 & 0.13333511 & 0.33077959 & 1.0000000 \\
+    \hline
+  \end{tabular}
+  \caption{Multicolinearity Check of Numeric Variables}
+  \label{Correlation Matrix}
+\end{table}
+
+Concluding this exploratory analysis of the data we can feel generally confident in all of the information collected. And in looking at the histogram and scatterplots, as well as the correlation coefficients we can safely determine that the best course of action for us is Ordinal Regression. For our purposes the incorporation of ordinal regression makes the most sense because the chart position variable is ordinal, with rankings from 1-100. In order for us to use ordinal regression to model our data we must first confirm the assumptions of ordinal regression. These assumptions are included in table 5.
 
 \section{Methods}
 \label{sec:meth}
 
+\begin{table}[t]
+  \centering
+  \begin{tabular}{|c|}
+    \hline
+      - Assumptions - \\
+    \hline
+     The dependant variable is measured on an ordinal  level\\
+     One or more of the predictor variables are continuous, categorical or ordinal \\
+     No Multicollinearity \\
+     Proportional Odds \\
+    \hline
+  \end{tabular}
+  \caption{Assumptions of Ordinal Regression}
+  \label{Assumptions}
+\end{table}
+
+In order to confirm the assumption of zero multicollinearity we turn our attention to table 4. It is here where we can see what looks to be quite promising results. As is recorded, none of the correlation coefficients have an absolute value $> 0.7$ which is a rough confirmation that there is no multicollinearity present amongst the predictor variables. And in confirming the other assumptions of ordinal regression we find similar success. As I've already described, the dependent variable does indeed have an ordinal structure, as well, we are using one or more continuous, categorical, or ordinal variables. We can similarly confirm that each independent variable has an identical effect across all points of the ordinal dependent variable.\\
+
+With the assumptions of ordinal regression confirmed we may begin to model our data. I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artists variable as well, as this will give us coefficients and relevant information for each artist in 2023. 
 
 
 
