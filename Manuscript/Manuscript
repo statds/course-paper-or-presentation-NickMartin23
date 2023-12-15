@@ -33,7 +33,6 @@ In 2023 the music industry remains more divided than ever before, yet as a socie
 \section{Introduction}
 \label{sec:intro}
 For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statistical models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in finding out more about ourselves and our habits over time. It is of course very important for people who are a part of the music industry as well. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentially chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.\\
-
 % roadmap
 The rest of the paper is organized traditionally with Section~\ref{sec:data} where I will analyze the data and clean it according to our modeling purposes. I will also discuss which data I will be using for this project and where it comes from as well as some summary statistics. Next I will use Section~\ref{sec:meth} in order to perform some testing and to formulate my plan for modeling using ordinal regression. Finally within Section~\ref{sec:resu} I will analyze the model that I have landed on by testing the goodness of fit, as well I will be able to interpret the coefficients. This is followed by the conclusion of this paper; a brief discussion found in Section~\ref{sec:disc}.
 
@@ -62,7 +61,7 @@ The rest of the paper is organized traditionally with Section~\ref{sec:data} whe
 \section{Data}
 \label{sec:data}
 
-For the actual track list that I will be using to make my predictions I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity aswell; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on a particular song.\\
+For the actual track list that I will be using to make my predictions I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity aswell; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on each song.\\
 
 \begin{table}
   \centering
@@ -86,7 +85,7 @@ In order to conduct the model building segment of our statistical analysis latte
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{Histogram1.pdf}
+  \includegraphics[width=0.55\textwidth]{Histogram1.pdf}
   \caption{Histograms of Independent Variables}
   \label{fig:Hist1}
 \end{figure}
@@ -95,14 +94,14 @@ I have plotted histograms for the four numeric variables in our dataset and the 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{Scatterplot1.pdf}
-  \caption{Scatterplots of Independant Variables}
+  \includegraphics[width=0.55\textwidth]{Scatterplot1.pdf}
+  \caption{Scatterplots of Independent Variables}
   \label{fig:Scatterplot1}
 \end{figure}
 
 As We can see from each of the scatter-plots our variables do not appear to have any initial correlation with that of the dependant variable chart position. We've determined this as there is notable randomness in each of the plots and there is no apparent positive or negative trend that we can see visually. There are however small exceptions that can be found in the plot of Track Length, and Energy; Note the subtle pattern that may be examined among the points. A small positive correlation can potentially be seen in both casenerios. In order to further confirm these findings I have gone ahead and used the correlation function in Rstudio so as to determine these variables relationship with the dependent.
 
-\begin{table}
+\begin{table}[h]
   \centering
   \begin{tabular}{|c|c|c|c|}
     \hline
@@ -111,11 +110,11 @@ As We can see from each of the scatter-plots our variables do not appear to have
     0.06836279 & 0.02202227 & -0.04396084 & 0.1356192 \\
     \hline
   \end{tabular}
-  \caption{Correlation Coeficient of Numeric Variables}
+  \caption{Correlation Coefficient of Numeric Variables}
   \label{CorrCoef}
 \end{table}
 
-The correlation coefficients that we've gotten for each of the variables support the thoughts from our scatter-plots. the coefficients remain generally close to zero which could determine no correlation in some case. This could also suggest using transformations, such as a log transformation, in order to more accurately present the relationship that a particular variable has with the chart position dependant variable. The correlation between Valence and chart position remains the highest at 0.1356192. This could suggest potentially that songs that have a higher valence (Sound Happier; i.e Major Keys) would be more likely to chart. I have also gone ahead and conducted tests for multicolinearity as to check the predictors for any particularly strong correlation. This step is important, otherwise we may run into some problems down the road with respects to estimating the coefficients and interpreting our results.\\
+The correlation coefficients that we've gotten for each of the variables support the thoughts from our scatter-plots. the coefficients remain generally close to zero which could determine no correlation in some case. This could also suggest using transformations, such as a log transformation, in order to more accurately present the relationship that a particular variable has with the chart position dependant variable. The correlation between Valence and chart position remains the highest at 0.1356192. This could suggest potentially that songs that have a higher valence (Sound Happier; i.e Major Keys) would be more likely to chart. I have also gone ahead and conducted tests for multicollinearity as to check the predictors for any particularly strong correlation. This step is important, otherwise we may run into some problems down the road with respects to estimating the coefficients and interpreting our results.\\
 
 \begin{table}[h]
   \centering
@@ -129,7 +128,7 @@ The correlation coefficients that we've gotten for each of the variables support
     Valence & -0.19715467 & 0.13333511 & 0.33077959 & 1.0000000 \\
     \hline
   \end{tabular}
-  \caption{Multicolinearity Check of Numeric Variables}
+  \caption{Multicollinearity Check of Numeric Variables}
   \label{Correlation Matrix}
 \end{table}
 
@@ -138,7 +137,11 @@ Concluding this exploratory analysis of the data we can feel generally confident
 \section{Methods}
 \label{sec:meth}
 
-\begin{table}[t]
+\begin{equation}
+  logit(P(Y\le j)) = \alpha_j - \beta_1 X_1 - \beta_2X_2 - \ldots - \beta_kX_k
+\end{equation}
+
+\begin{table}[h]
   \centering
   \begin{tabular}{|c|}
     \hline
@@ -154,14 +157,44 @@ Concluding this exploratory analysis of the data we can feel generally confident
   \label{Assumptions}
 \end{table}
 
-In order to confirm the assumption of zero multicollinearity we turn our attention to table 4. It is here where we can see what looks to be quite promising results. As is recorded, none of the correlation coefficients have an absolute value $> 0.7$ which is a rough confirmation that there is no multicollinearity present amongst the predictor variables. And in confirming the other assumptions of ordinal regression we find similar success. As I've already described, the dependent variable does indeed have an ordinal structure, as well, we are using one or more continuous, categorical, or ordinal variables. We can similarly confirm that each independent variable has an identical effect across all points of the ordinal dependent variable.\\
 
-With the assumptions of ordinal regression confirmed we may begin to model our data. I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artists variable as well, as this will give us coefficients and relevant information for each artist in 2023. 
+In order to confirm the assumption of zero multicollinearity we turn our attention to table 4. It is here where we can see what looks to be quite promising results. As is recorded, none of the correlation coefficients have an absolute value $> 0.7$ which is a rough confirmation that there is no multicollinearity present amongst the predictor variables. And in confirming the other assumptions of ordinal regression we find similar success. As I've already described, the dependent variable does indeed have an ordinal structure, as well, we are using one or more continuous, categorical, or ordinal variables. We can similarly confirm that each independent variable has an identical effect across all points of the ordinal dependent variable. Now, with our assumptions of ordinal regression confirmed we may begin to model our data. I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artists variable as well, as this will give us coefficients and relevant information for each artist in 2023. \\
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    & Value & Std. Error & t value \\
+    \hline
+      Bailey Zimmerman & -22.71142 & 1.121163 & -20.257 \\
+      Billie Eilish  &  -9.63275 & 1.468580 & -6.559 \\
+      Bizarrap      &   -8.55958 &  1.837613 & -4.658 \\
+      Bobby Helms  &    -20.85038 &  1.516170 & -13.752 \\
+      Brenda Lee   &  -27.79943  &  1.566911 & -17.742 \\
+      Burl Ives     &  -19.95231 &  1.619525 & -12.320 \\
+      Chris Brown   &  -22.80909 &  1.469830 & -15.518 \\
+      Coi Leray    &  -26.94386  & 1.450752 & -18.572 \\
+      Corey Kent    &  -7.88507 &  1.742527 &  -4.525 \\
+      Cuff It    &  -25.93850  &  1.608425 & -16.127 \\
+      Track Length & -0.01497 &  0.007693 & -1.946 \\
+      BPM & -0.07488 & 0.017311 & -4.325 \\
+      Energy & 0.01858 &  0.011441 &  1.624 \\
+      Valence &  0.15108 & 0.009052 & 16.689 \\
+    \hline
+  \end{tabular}
+  \caption{Ordinal Regression Model 1}
+  \label{Model1}
+\end{table}
+
+I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artist variable as well, as this will give us coefficients and relevant information for each artist in 2023. For our viewing purposes I have only included metadata for the first 10 artists, as well as the coefficients for Track Length, BPM, Energy, and Valence. As we may have predicted the artists with the most songs, and the songs at the highest position on the Billboard charts prove to have the most pull in this model. This makes sense from a real world standpoint. If an artist has a song go number one on the year charts, by proxy, that artists other songs have an increased likelihood of charting high. We can see this in the context of Morgan Wallen who not only had the number one position but have seven other songs enter the year end top 100, all off of the same album. This is in part because of those other songs proximity to the number one smash hit. We can see as well the coefficients for each of the remaining predictor variables. Both track length and BPM have a negative relationship with chart position, where as the energy and valence predictors remain positively correlated. The most impactful predictor variable is Valence with a coefficient of 0.15108. \\
 
 
 \section{Results}
 \label{sec:resu}
+
+Now as we come to the conclusion of this report, with our first model I am going to assess the goodness of fit by checking the deviance and AIC of our model and plotting it as well. 
+
+
 
 
 
