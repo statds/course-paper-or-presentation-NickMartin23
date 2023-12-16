@@ -26,13 +26,13 @@
 \maketitle
 
 \begin{abstract}
-In 2023 the music industry remains more divided than ever before, yet as a society we grow more and more connected each year through outlets like the internet or social media. What is the explanation for this? Most believe that with the progression of technology comes the ability to streamline information and media. An individual's ability to consume music looks much different nowadays than it did in the 1960’s. Streaming platforms have basically made it so that any child with a cellphone has access to millions of songs for free. A stark contrast from the earlier 20th centuries’ vinyl format. It is because of this evolution in media consumption that most people believe the charts are so segmented. With the internet people don't have to subject themselves to Pop radio in order to hear music. Specific tastes and sub genres can be discovered easily using Spotify for example; a streaming service that even recommends specific songs based on what you’ve already listened to. People's taste in music has become so specific this way. Now anyone is able to find songs and artists that exactly match their music taste regardless of the popularity of that artist. It is in this explanation that I hold a lot of stock in explaining why Billboard's 2023 Year End Top 100 songs chart contains such a variation of artists, and why the content of the songs on it vary as well. There is so much information that we can surmise by examining these year end lists. And although it may seem arbitrary, a lot of this information is being used in full effect by the music industry, not only to predict the popularity of the music, but as well to learn more about ourselves as a species and the way we’ve consumed media over time.
+In 2023 the music industry remains more divided than ever before, yet as a society we grow more and more connected each year through outlets like the internet or social media. What is the explanation for this? Most believe that with the progression of technology came the ability to streamline information and media. An individual's ability to consume music looks much different nowadays than it did in the 1960’s. Streaming platforms have basically made it so that any child with a cellphone has access to millions of songs for free. A stark contrast from the earlier 20th centuries’ vinyl format. It is because of this evolution in media consumption that the charts are so segmented. With the internet people don't have to subject themselves to Pop radio in order to hear music. Specific tastes and sub genres can be discovered easily using Spotify for example; a streaming service that even recommends specific songs based on what you’ve already listened to. People's taste in music has become so specific this way. Now anyone is able to find songs and artists that exactly match their music taste regardless of the popularity of that artist. It is in this explanation that I hold a lot of stock in explaining why Billboard's 2023 Year End Top 100 songs chart contains such a variation of artists, and why the content of the songs on it vary as well. There is so much information that we can surmise by examining these year end lists. And although it may seem arbitrary, a lot of this information is being used in full effect by the music industry, not only to predict the popularity of the music, but as well to learn more about ourselves as a species and the way we consume media over time.
 \end{abstract}
 
 
 \section{Introduction}
 \label{sec:intro}
-For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statistical models in order to predict musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in finding out more about ourselves and our habits over time. It is of course very important for people who are a part of the music industry as well. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to predict a song's potentially chart position. I will start off by examining the data, after which I will use General Linear Regression in order to create some models for the project. Finally I aim to use song data from other years to predict how well a track would’ve done on the chart in 2023.\\
+For the purposes of this statistical analysis my main goal is simple. I aim to explore the use of statistical models in order to explain musical trends for the year 2023. For this task I am using the year end top100 list from Billboard and I am using data from RouteNote for the variables I will be using. I chose this particular topic since it pertains to me greatly as a musician and music listener. But these types of studies are deeply important in finding out more about ourselves and our habits over time. It is of course very important for people who are a part of the music industry as well. Because of this, prior research has of course been done on this topic generally extensively. People have been using chart data for years to predict trends. This is a popular practice for the boardroom category of song writing. However, It is with the year almost at its end that I turn my focus to 2023, where I will use data from the year in order to understand a song's potential chart position. I will start off by examining the data, after which I will use ordinal regression in order to create some models for the project. I will also interpret the coefficients of the final model . \cite{popularity} \\
 % roadmap
 The rest of the paper is organized traditionally with Section~\ref{sec:data} where I will analyze the data and clean it according to our modeling purposes. I will also discuss which data I will be using for this project and where it comes from as well as some summary statistics. Next I will use Section~\ref{sec:meth} in order to perform some testing and to formulate my plan for modeling using ordinal regression. Finally within Section~\ref{sec:resu} I will analyze the model that I have landed on by testing the goodness of fit, as well I will be able to interpret the coefficients. This is followed by the conclusion of this paper; a brief discussion found in Section~\ref{sec:disc}.
 
@@ -61,7 +61,7 @@ The rest of the paper is organized traditionally with Section~\ref{sec:data} whe
 \section{Data}
 \label{sec:data}
 
-For the actual track list that I will be using to make my predictions I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity aswell; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on each song.\\
+For the actual track list that I will be using to make my analysis I am using the 2023 Billboard top 100 year end chart. Billboard basically has taken into account all aspects of each song's performance. This includes: airplay, sales, and jukebox activity as well; which includes streams. Billboard then creates a point system which typically gives sales more weight than the other variables as purchases of a song are a great indicator that that song is particularly popular. And from their point system Billboard compiles the year end statistics for 2023; the song with the most streams and sales and airplay gets the first spot and the other 99 most popular songs of the year comprise the rest of the list. It is an extremely useful and regulated tool to get popular song data from. And it is important to note that Billboard compiles their data across all genres. For the actual music data that I will be using I have enlisted the help of RouteNote which is an extremely useful tool that calculates data based on individual songs. This data includes several variables including: track length, BPM, and key. The song dataset that I will be working with contains 6 columns; 5 independent variables and a dependent variable. It contains the year end chart position for each song on the 2023 Billboard chart, artist name, bpm, track length, energy coefficient and valence coefficient. All of the variables that I have acquired from RouteNote are gathered using Spotify’s AI which uses machine learning in order to determine metadata on each song.\\
 
 \begin{table}
   \centering
@@ -81,7 +81,7 @@ For the actual track list that I will be using to make my predictions I am using
   \label{Summary}
 \end{table}
 
-In order to conduct the model building segment of our statistical analysis latter we must encode the categorical variable within this dataset so that when we use Rstudio we can perform linear regression. Similarly I have converted the track length variable which is in format (M:SS) into a numerical value representing how long each song is in seconds. Further summarizing the data will tell us more even more information. We can see that it was a particularly good year for Morgan Wallen who had 8 songs on the Billboard charts this year doubling second places SZA. We can predict that the artist variable may have significant pull when it comes to our final model; as it definitely payed to be Morgan Wallen in 2023.\\
+In order to conduct the model building segment of our statistical analysis latter we must encode the categorical variable within this dataset so that when we use Rstudio we can perform linear regression. Similarly I have converted the track length variable which is in format (M:SS) into a numerical value representing how long each song is in seconds. Further summarizing the data will tell us more even more information. We can see that it was a particularly good year for Morgan Wallen who had 8 songs on the Billboard charts this year doubling second places SZA. We can predict that the artist variable may have significant pull when it comes to our final model; as it definitely payed to be Morgan Wallen in 2023.\\ \cite{analysis}
 
 \begin{figure}[h]
   \centering
@@ -158,7 +158,7 @@ Concluding this exploratory analysis of the data we can feel generally confident
 \end{table}
 
 
-In order to confirm the assumption of zero multicollinearity we turn our attention to table 4. It is here where we can see what looks to be quite promising results. As is recorded, none of the correlation coefficients have an absolute value $> 0.7$ which is a rough confirmation that there is no multicollinearity present amongst the predictor variables. And in confirming the other assumptions of ordinal regression we find similar success. As I've already described, the dependent variable does indeed have an ordinal structure, as well, we are using one or more continuous, categorical, or ordinal variables. We can similarly confirm that each independent variable has an identical effect across all points of the ordinal dependent variable. Now, with our assumptions of ordinal regression confirmed we may begin to model our data. I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artists variable as well, as this will give us coefficients and relevant information for each artist in 2023. \\
+In order to confirm the assumption of zero multicolinearity we turn our attention to table 4. It is here where we can see what looks to be quite promising results. As is recorded, none of the correlation coefficients have an absolute value $> 0.7$ which is a rough confirmation that there is no multicolinearity present amongst the predictor variables. And in confirming the other assumptions of ordinal regression we find similar success. As I've already described, the dependent variable does indeed have an ordinal structure, as well, we are using one or more continuous, categorical, or ordinal variables. We can similarly confirm that each independent variable has an identical effect across all points of the ordinal dependent variable. Now, with our assumptions of ordinal regression confirmed we may begin to model our data. I have gone ahead and used the polr function in Rstudio as to properly format our ordinal regression. For this first model, I have included the artists variable as well, as this will give us coefficients and relevant information for each artist in 2023. \\ \cite{ordinal}
 
 \begin{table}[h]
   \centering
@@ -192,24 +192,85 @@ I have gone ahead and used the polr function in Rstudio as to properly format ou
 \section{Results}
 \label{sec:resu}
 
-Now as we come to the conclusion of this report, with our first model I am going to assess the goodness of fit by checking the deviance and AIC of our model and plotting it as well. 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+      AIC & Deviation \\
+    \hline
+      1160.857 & 806.8571 \\
+    \hline
+  \end{tabular}
+  \caption{Goodness of Fit}
+  \label{AICtable}
+\end{table}
 
+Now as we come to the conclusion of this report and we have our first model I am going to assess the goodness of fit by checking the deviance and AIC of our model and plotting it as well. As we can see, the AIC and the deviation of our model both remain quite high. This is a good indicator that there are still some inadequacies within our model. We can see this as-well within each of the cumulative probability plots that are provided for each predictor variable. Large spikes, like the ones in the cumulative probability plot for track length and Energy(X4), indicate deviations in model adequacy. They also indicate transitions between ordinal categories. This dose spark some ideas that could improve our currently existing model. We are going to perform log transformation on each of the numerical predictor variables as this should improve our model in terms of correlation coefficients, AIC and Deviation. 
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Rplot01.pdf}
+  \caption{Cumulative Probability plot for Track Length}
+  \label{fig:Reg1}
+\end{figure}
 
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=0.45\textwidth]{Rplot03.pdf}
+  \caption{Cumulative Probability plot for Energy}
+  \label{fig:Reg3}
+\end{figure}
 
+We conclude that performing log transformation on each of the predictor variables has improved our model greatly. See how the correlation coefficients have increased for each variable except for Energy. Therefore I have noted to not include log Energy in the final model. And after using this new model to perform our ordinal regression we are greated with an equally reassuring decrease in both the AIC and deviation in our final model. After making this final improvement I feel comfortable in interpreting the results of our model. 
 
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+      Log Track Length & Log BPM & Log Energy & Log Valence & AIC  & Deviation  \\
+    \hline
+      0.07426102 & -0.03611656 & -0.02256597 & 0.1410726 & 1125.601 & 771.6013 \\
+    \hline
+  \end{tabular}
+  \caption{Correlation Coefficients, AIC, and Deviation of New Model}
+  \label{Coef2}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    & Value & Std. Error & t value \\
+    \hline
+      Bailey Zimmerman & -7.4166 &  2.495  & -2.97241 \\
+      Billie Eilish  &  1.6459  &   5.343  &  0.30806 \\
+      Bizarrap      &  3.5237 & 2.759   &  1.27716 \\
+      Bobby Helms  &  -2.9792  &  3.755  & -0.79340 \\
+      Brenda Lee   &  -6.9369 &  4.519 & -1.53501 \\
+      Burl Ives     &  -1.9924 &   3.710 & -0.53710 \\
+      Chris Brown   &   -8.4348&   2.568 & -3.28488 \\
+      Coi Leray  & -7.8624 & 3.553 & -2.21291 \\
+      Corey Kent    &  2.8094 &  2.424 &  1.15878 \\
+      Cuff It    &    -8.8861 &  2.733 & -3.25145 \\
+      Track Length &  1.2336 & 3.672  & 0.33594 \\
+      BPM &  -4.3389 & 2.303 & -1.88387 \\
+      Energy & 1.0693  &    2.084 &  0.51316 \\
+      Valence &   2.0138 &    1.090 & 1.84758 \\
+    \hline
+  \end{tabular}
+  \caption{Ordinal Regression Model 2}
+  \label{Model2}
+\end{table}
+
+I have similarly included only the first ten entries for the artist category for visual purposes. We can see the individual impact each artist has on chart position, we can also see from table 9 information regarding the standard error and t-values for each variable. From this final model we can surmise that track length is responsible for 1.2336 percent of the change in chart position, BPM is negatively correlated and is responsible for 4.3389 percent, energy is responsible for 1.0693 percent of the change and finally valences is responsible for 2.0138 percent of the change in chart position.
 
 \section{Discussion}
 \label{sec:disc}
 
-What are the main contributions again?
-
-What are the limitations of this study?
-
-What are worth pursuing further in the future?
+At the end of this report I believe we can feel sufficiently confident in our ordinal model. We sufficiently used artist, track length, BPM, energy, and valence variables in order to make a model to predict chart position. The importance of this project, and others like it, remains. Individuals inside and outside of the music industry are using statistical modeling all of the time in order to better understand popularity in music. What I have done within this report is prove on a base level the potential benefits statistical modeling can have on our own understanding of musical trends and patterns. There were several notable limitations to my project however. Although the framework of the year end top 100 worked for the purposes of this project, more data of course would promote more accurate results. Another limitation of this particular analysis is the particular variables that I was working with. More variables could have provided more information and would've potentially lead to a more accurate final model. Further work on this topic is just waiting to be conducted. Some variables that I would personally hope to include in future research would be that of genre as well as decibel to calculate predictions based on these two factors as well. We could also broaden the scope of this project to include data from other countries other than the United States. Further advances in the world of machine learning and data science aswell would of course lend them selves to great revelations within this field of statistical analysis. Art is a key part of our society as human beings. This is why I personally think this kind of analysis is so important. It gives us more of an understanding of ourselves and the way we consume art. I am eager to see where this particular conversation will go in the future of data science.  
 
 
-\bibliography{refs}
 \bibliographystyle{plain}
+\bibliography{refs}
 
 \end{document}
